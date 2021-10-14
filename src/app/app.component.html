@@ -1,1 +1,38 @@
-<h1>app works</h1>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over">
+    <label>My Application</label>
+    <hr />
+    <nav>
+      <a routerLink="home" routerLinkActive="active">Home</a>
+    </nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <header>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        <label>My Application</label>
+        <nav>
+          <a routerLink="home" routerLinkActive="active">Home</a>
+        </nav>
+      </header>
+    </mat-toolbar>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>mat</mat-card-title>
+    <mat-card-subtitle>works</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>it really works</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary">IT</button>
+    <button mat-flat-button color="accent">WORKS</button>
+  </mat-card-actions>
+</mat-card>
