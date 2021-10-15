@@ -9,9 +9,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { ProjectsPageComponent } from './components/projects-page/projects-page.component';
+import { AboutPageComponent } from './components/about-page/about-page.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomePageComponent, ProjectsPageComponent, AboutPageComponent],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
