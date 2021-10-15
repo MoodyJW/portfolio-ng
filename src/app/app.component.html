@@ -1,28 +1,15 @@
-<mat-sidenav-container>
-  <mat-sidenav #sidenav mode="over">
-    <label>JWM!</label>
-    <hr />
-    <nav>
+<mat-toolbar color="primary">
+  <header class="nav-header">
+    <div class="icon-title-container">
+      <label>JWM</label>
+    </div>
+    <mat-nav-list class="nav-list-items">
       <a class="navbar-link" routerLink="/home"> home </a>
       <a class="navbar-link" routerLink="/projects"> projects </a>
       <a class="navbar-link" routerLink="/about"> about </a>
-    </nav>
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <header>
-        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-        <label>JWM</label>
-        <nav>
-          <a class="navbar-link" routerLink="/home"> home </a>
-          <a class="navbar-link" routerLink="/projects"> projects </a>
-          <a class="navbar-link" routerLink="/about"> about </a>
-        </nav>
-      </header>
-    </mat-toolbar>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    </mat-nav-list>
+  </header>
+</mat-toolbar>
 
 <main [@routeAnimations]="prepareRoute(outlet)" class="content">
   <router-outlet #outlet="outlet"></router-outlet>
