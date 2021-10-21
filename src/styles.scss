@@ -4,14 +4,30 @@
 
 body {
   margin: 0;
-  max-height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   background: gray;
 }
 
 main {
   position: relative;
+  height: 95vh;
 }
 
 mat-sidenav-content.mat-drawer-content {
   overflow: hidden;
+}
+
+.jwm-main-card {
+  height: 100%;
+}
+
+.jwm-page-container {
+  height: -webkit-fill-available;
+}
+
+mat-card {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }

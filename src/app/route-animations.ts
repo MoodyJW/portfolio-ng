@@ -21,6 +21,7 @@ export const fader = trigger('routeAnimations', [
           position: 'absolute',
           left: 0,
           width: '100%',
+          height: '100%',
           opacity: 0,
           transform: 'scale(0) translateY(100%)',
         }),
@@ -53,6 +54,7 @@ function slideTo(direction: string) {
           top: 0,
           [direction]: 0,
           width: '100%',
+          height: '100%',
         }),
       ],
       optional
@@ -96,6 +98,7 @@ function transformTo({ x = 100, y = 0, rotate = 0 }) {
           top: 0,
           left: 0,
           width: '100%',
+          height: '100%',
         }),
       ],
       optional
@@ -133,6 +136,7 @@ export const stepper = trigger('routeAnimations', [
           position: 'absolute',
           left: 0,
           width: '100%',
+          height: '100%',
         }),
       ],
       optional

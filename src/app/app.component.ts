@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { slider, transformer, fader, stepper } from './route-animations';
 @Component({
@@ -7,10 +8,37 @@ import { slider, transformer, fader, stepper } from './route-animations';
   styleUrls: ['./app.component.scss'],
   animations: [stepper],
 })
-export class AppComponent {
-  title = 'JWM';
+export class AppComponent implements OnInit {
+  private themeQuery: MediaQueryList;
+  private getScreenWidth: any;
 
-  prepareRoute(outlet: RouterOutlet) {
+  public title = 'JWM';
+  public isDark = true;
+  public isSmallScreen: boolean;
+
+  constructor(private media: MediaMatcher) {
+    this.getScreenWidth = window.innerWidth;
+    if (this.getScreenWidth < 500) {
+      this.isSmallScreen = true;
+    } else this.isSmallScreen = false;
+    this.themeQuery = this.media.matchMedia('(prefers-color-scheme: dark)');
+  }
+
+  ngOnInit(): void {
+    if (this.themeQuery.matches) {
+      this.isDark = true;
+    } else this.isDark = false;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.getScreenWidth = window.innerWidth;
+    if (this.getScreenWidth < 500) {
+      this.isSmallScreen = true;
+    } else this.isSmallScreen = false;
+  }
+
+  prepareRoute(outlet: RouterOutlet): boolean {
     return (
       outlet &&
       outlet.activatedRouteData &&

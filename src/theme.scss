@@ -218,7 +218,7 @@ $theme: (
   foreground: $mat-dark-theme-foreground,
   background: $mat-dark-theme-background,
 );
-$altTheme: (
+$custom-light-theme: (
   primary: $theme-primary,
   accent: $theme-accent,
   warn: $theme-warn,
@@ -230,8 +230,8 @@ $altTheme: (
 // Theme Init
 @include mat.all-component-themes($theme);
 
-.theme-alternate {
-  @include mat.all-component-themes($altTheme);
+.light-theme {
+  @include mat.all-component-themes($custom-light-theme);
 }
 
 // Specific component overrides, pieces that are not in line with the general theming

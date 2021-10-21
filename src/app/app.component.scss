@@ -1,17 +1,23 @@
-.nav-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.app-container {
+  height: 100vh;
 
-  .icon-title-container {
-    padding: 8px 0 0 0;
+  .app-toolbar {
+    height: 5vh;
+  }
+}
+
+.large-screen-container {
+  .nav-header {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
 
-  .nav-list-items {
-    display: flex;
-    gap: 8px;
+    .nav-list-items {
+      display: flex;
+      gap: 8px;
+    }
   }
+}
+
+.small-screen-container {
 }
