@@ -1,3 +1,11 @@
+.app-container {
+  height: 100vh;
+
+  .app-toolbar {
+    height: 5vh;
+  }
+}
+
 .large-screen-container {
   .nav-header {
     display: flex;

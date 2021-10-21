@@ -9,25 +9,22 @@ import { slider, transformer, fader, stepper } from './route-animations';
   animations: [stepper],
 })
 export class AppComponent implements OnInit {
-  title = 'JWM';
-  // theme = 'theme-alternate';
-  checked = false;
-  isDark = true;
-  themeQuery: MediaQueryList;
+  private themeQuery: MediaQueryList;
+  private getScreenWidth: any;
+
+  public title = 'JWM';
+  public isDark = true;
   public isSmallScreen: boolean;
-  public getScreenWidth: any;
-  public getScreenHeight: any;
 
   constructor(private media: MediaMatcher) {
     this.getScreenWidth = window.innerWidth;
-    this.getScreenHeight = window.innerHeight;
     if (this.getScreenWidth < 500) {
       this.isSmallScreen = true;
     } else this.isSmallScreen = false;
     this.themeQuery = this.media.matchMedia('(prefers-color-scheme: dark)');
   }
-  ngOnInit() {
-    console.log(this.themeQuery);
+
+  ngOnInit(): void {
     if (this.themeQuery.matches) {
       this.isDark = true;
     } else this.isDark = false;
@@ -36,7 +33,6 @@ export class AppComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
     this.getScreenWidth = window.innerWidth;
-    this.getScreenHeight = window.innerHeight;
     if (this.getScreenWidth < 500) {
       this.isSmallScreen = true;
     } else this.isSmallScreen = false;
@@ -49,8 +45,4 @@ export class AppComponent implements OnInit {
       outlet.activatedRouteData['animation']
     );
   }
-
-  // changeTheme(event: any) {
-  //   this.theme = event.checked ? 'theme-alternate' : '';
-  // }
 }
