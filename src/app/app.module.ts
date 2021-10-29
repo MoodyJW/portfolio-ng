@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { ProjectsPageComponent } from './components/projects-page/projects-page.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomePageComponent,
     ProjectsPageComponent,
     AboutPageComponent,
-    NavbarComponent,
+    NavigationComponent,
   ],
   imports: [AppRoutingModule, BrowserAnimationsModule, BrowserModule],
   providers: [],

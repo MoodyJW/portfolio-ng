@@ -1,0 +1,14 @@
+<ng-container [ngSwitch]="pathName">
+  <ng-container *ngSwitchCase="'home'">
+    <a routerLink="/projects">projects</a>
+    <a routerLink="/about">about</a>
+  </ng-container>
+  <ng-container *ngSwitchCase="'projects'">
+    <a routerLink="/home">home</a>
+    <a routerLink="/about">about</a>
+  </ng-container>
+  <ng-container *ngSwitchCase="'about'">
+    <a routerLink="/home">home</a>
+    <a routerLink="/projects">projects</a>
+  </ng-container>
+</ng-container>
