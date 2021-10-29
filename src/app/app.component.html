@@ -1,45 +1,4 @@
-<div
-  [class]="isDark ? 'dark-theme app-container' : 'light-theme app-container'"
->
-  <mat-toolbar class="app-toolbar">
-    <header class="nav-header">
-      <ng-container
-        *ngIf="!isSmallScreen; else smallScreen"
-        class="large-screen-container"
-      >
-        <mat-nav-list class="nav-list-items">
-          <a class="navbar-link" routerLink="/home"> JWM </a>
-          <a class="navbar-link" routerLink="/projects"> projects </a>
-          <a class="navbar-link" routerLink="/about"> about </a>
-        </mat-nav-list>
-
-        <mat-slide-toggle (change)="isDark = !isDark" [checked]="isDark">
-          Go Dark
-        </mat-slide-toggle>
-      </ng-container>
-      <ng-template #smallScreen>
-        <ng-container class="small-scren-container">
-          <button
-            mat-icon-button
-            [matMenuTriggerFor]="menu"
-            class="menu-button"
-            aria-label="button with a navigation menu"
-          >
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu">
-            <mat-nav-list class="nav-list-items">
-              <a class="navbar-link" routerLink="/home"> home </a>
-              <a class="navbar-link" routerLink="/projects"> projects </a>
-              <a class="navbar-link" routerLink="/about"> about </a>
-            </mat-nav-list>
-          </mat-menu>
-        </ng-container>
-      </ng-template>
-    </header>
-  </mat-toolbar>
-
-  <main [@routeAnimations]="prepareRoute(outlet)">
-    <router-outlet #outlet="outlet"></router-outlet>
-  </main>
-</div>
+<app-navbar></app-navbar>
+<main [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</main>
