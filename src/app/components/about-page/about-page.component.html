@@ -1,1 +1,156 @@
 <app-navigation></app-navigation>
+<!-- have something that switches between the short version and the long version? -->
+<div class="app-page-container about-page">
+  <h1 class="heading">about</h1>
+  <div class="heading-buttons">
+    <button
+      class="version-button"
+      [ngClass]="{ selected: short }"
+      [disabled]="short"
+      (click)="short = !short"
+    >
+      theatrical cut
+    </button>
+    <button
+      class="version-button"
+      [ngClass]="{ selected: !short }"
+      [disabled]="!short"
+      (click)="short = !short"
+    >
+      extended edition
+    </button>
+  </div>
+  <div [@fader]="short ? 'open' : 'closed'">
+    <div class="short-version" *ngIf="short">
+      <div class="section-container">
+        <h2
+          class="section-header"
+          (click)="toggleShowHide(0)"
+          [ngClass]="sectionIsOpen[0] === 'open' ? 'open' : 'closed'"
+        >
+          languages & frameworks
+        </h2>
+        <div
+          class="section-text"
+          [@showHide]="sectionIsOpen[0]"
+          (click)="toggleShowHide(0)"
+        >
+          <div>JavaScript / TypeScript / Python</div>
+          <div>Angular / React</div>
+          <div>CSS3 / HTML / Sass</div>
+          <div>Material / Bootstrap</div>
+          <div>Django / SQL / Various Libraries</div>
+          <div>Stack Overflow / YouTube / MDN</div>
+        </div>
+      </div>
+
+      <div class="section-container">
+        <h2
+          class="section-header"
+          (click)="toggleShowHide(1)"
+          [ngClass]="sectionIsOpen[1] === 'open' ? 'open' : 'closed'"
+        >
+          coding experience
+        </h2>
+        <div class="section-text" [@showHide]="sectionIsOpen[1]">
+          <div>
+            Dec 2019 - Present
+            <span class="app-bold-text">Application Development Engineer</span>,
+            NOV - Houston, TX
+          </div>
+          <ul>
+            <li>
+              Refactor one of the company’s oldest applications into a modern,
+              responsive Angular application
+            </li>
+            <li>
+              Collaborate with non-technical colleagues and UI/UX to streamline
+              development in a fully remote setting
+            </li>
+            <li>Create and instruct training workshops for peers</li>
+            <li>Perform code review in an agile environment</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-container">
+        <h2
+          class="section-header"
+          (click)="toggleShowHide(2)"
+          [ngClass]="sectionIsOpen[2] === 'open' ? 'open' : 'closed'"
+        >
+          other experience
+        </h2>
+        <div class="section-text" [@showHide]="sectionIsOpen[2]">
+          <div>
+            Dec 2019 - Present Application Development Engineer, NOV - Houston,
+            TX
+          </div>
+          <ul>
+            <li>
+              Refactor one of the company’s oldest applications into a modern,
+              responsive web application
+            </li>
+            <li>
+              Collaborate with non-technical colleagues and UI/UX to streamline
+              development in a fully remote setting
+            </li>
+            <li>Create and instruct training workshops for peers</li>
+            <li>Perform code review in an agile environment</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-container">
+        <h2
+          class="section-header"
+          (click)="toggleShowHide(3)"
+          [ngClass]="sectionIsOpen[3] === 'open' ? 'open' : 'closed'"
+        >
+          education
+        </h2>
+        <div class="section-text" [@showHide]="sectionIsOpen[3]">sutff</div>
+      </div>
+    </div>
+
+    <div class="long-version" *ngIf="!short">
+      <p>
+        The first time I wrote code was sometime in the late 90s when I
+        customized my AOL 3.0 profile. After that, I took a break from coding
+        for a while and finished high school, spent four years in the US Army,
+        bartended, sold cars, tutored writing, got a degree in psychology, and
+        worked as tech support for an insurance company.
+      </p>
+      <br />
+      <p>
+        In early 2019 I decided I wanted to learn Python and become a
+        programmer. I struggled; however, I became obsessed with coding. I'd
+        never understood what it was like to get such a sense of satisfaction
+        from something I could be paid to do.
+      </p>
+      <br />
+      <p>
+        I quit my insurance job and started coding. Day after day and hour after
+        hour, I beat my brain against the wall that is learning such a complex
+        new skill. Fast-forward a few months and I enrolled in a coding
+        bootcamp. With the help of an instructor and classmates, I started to
+        see serious progress and began learning JavaScript along with Python.
+      </p>
+      <br />
+      <p>
+        Before the bootcamp ended in November 2019, I had a contract-to-hire
+        position lined up with an oil and gas company in Houston, TX. They
+        wanted me to work on refactoring a massive legacy application into a
+        modern, responsive Angular application. I was ecstatic and terrified,
+        I'd never touched Angular before that interview, which I explained in
+        the interview, yet they still hired me.
+      </p>
+      <br />
+      <p>
+        After six months, the company offered me a full-time position and I've
+        been here for about two years now. Sometimes I wonder where I'd be if I
+        spent that 20 year break coding instead; nevertheless, I believe my
+        experiences leading up to this point are what provides me with a deep
+        appreciation for being able to do something I love and still pay rent.
+      </p>
+    </div>
+  </div>
+</div>

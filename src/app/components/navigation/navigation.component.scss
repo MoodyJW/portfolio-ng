@@ -1,0 +1,29 @@
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  height: 8vh;
+
+  // .navigation-link {
+  //   // font-size: 1em;
+  // }
+
+  .horizontal-line {
+    width: 100%;
+    margin: 0 1em;
+  }
+
+  .footer-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    // background: var(--background-primary);
+    z-index: 2;
+    height: 8vh;
+  }
+}

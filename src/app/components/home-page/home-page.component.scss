@@ -1,0 +1,20 @@
+.name-container {
+  font-size: 8vw;
+  font-family: "Fira Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+
+  .middle {
+    margin-left: 1em;
+  }
+
+  .last {
+    margin-left: 2em;
+  }
+}
+
+.supporting-copy {
+  margin: 10vh 1vw;
+}
