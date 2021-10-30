@@ -1,0 +1,33 @@
+<ng-container [ngSwitch]="pathName">
+  <div class="navigation-container">
+    <ng-container *ngSwitchCase="'home'">
+      <a class="navigation-link" routerLink="/projects">projects</a>
+      <hr class="horizontal-line" />
+      <a class="navigation-link" routerLink="/about">about</a>
+    </ng-container>
+    <ng-container *ngSwitchCase="'projects'">
+      <a class="navigation-link" routerLink="/home">home</a>
+      <hr class="horizontal-line" />
+      <a class="navigation-link" routerLink="/about">about</a>
+    </ng-container>
+    <ng-container *ngSwitchCase="'about'">
+      <a class="navigation-link" routerLink="/home">home</a>
+      <hr class="horizontal-line" />
+      <a class="navigation-link" routerLink="/projects">projects</a>
+    </ng-container>
+    <footer class="footer-navigation">
+      <a
+        class="navigation-link"
+        href="https://www.linkedin.com/in/jasonwmoody/"
+        target="_blank"
+        >in</a
+      >
+      <a
+        class="navigation-link"
+        href="https://github.com/MoodyJW"
+        target="_blank"
+        >git</a
+      >
+    </footer>
+  </div>
+</ng-container>

@@ -13,17 +13,17 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomePageComponent,
-    data: { animation: 'homePage' },
+    data: { animation: 'homePage', pathName: 'home' },
   },
   {
     path: 'projects',
     component: ProjectsPageComponent,
-    data: { animation: 'projectsPage' },
+    data: { animation: 'projectsPage', pathName: 'projects' },
   },
   {
     path: 'about',
     component: AboutPageComponent,
-    data: { animation: 'aboutPage' },
+    data: { animation: 'aboutPage', pathName: 'about' },
   },
 ];
 
