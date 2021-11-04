@@ -50,21 +50,30 @@ const showHide = trigger('showHide', [
   transition('open <=> closed', animate('900ms ease-in-out')),
 ]);
 
+const rotatedState = trigger('rotatedState', [
+  state('default', style({ transform: 'rotate(0)' })),
+  state('rotated', style({ transform: 'rotate(90deg)' })),
+  transition('rotated <=> default', animate('900ms ease-out')),
+]);
+
 @Component({
   selector: 'app-about-page',
   templateUrl: './about-page.component.html',
   styleUrls: ['./about-page.component.scss'],
-  animations: [fader, showHide],
+  animations: [fader, showHide, rotatedState],
 })
 export class AboutPageComponent implements OnInit {
   short = true;
   sectionIsOpen = [...Array(4)].map(() => 'closed');
+  rotatedState = [...Array(4)].map(() => 'default');
 
   constructor() {}
 
   ngOnInit(): void {}
 
   toggleShowHide(index: number): void {
+    this.rotatedState[index] =
+      this.rotatedState[index] === 'default' ? 'rotated' : 'default';
     this.sectionIsOpen[index] =
       this.sectionIsOpen[index] === 'closed' ? 'open' : 'closed';
   }
