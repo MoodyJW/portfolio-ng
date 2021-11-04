@@ -4,9 +4,9 @@ TODO:
 
 - [ ] about
   - [ ] short version
-    - [ ] languages and frameworks
-    - [ ] experience
-    - [ ] education
+    - [x] languages and frameworks
+    - [x] experience
+    - [x] education
     - [ ] references? other shit?
   - [ ] long version
     - [ ] write an essay no one will read
