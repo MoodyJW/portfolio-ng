@@ -19,7 +19,7 @@ export const fader = trigger('fader', [
         style({
           position: 'absolute',
           left: 0,
-          padding: '1em',
+          padding: '0 1em',
           width: '100%',
           height: '100%',
           opacity: 0,

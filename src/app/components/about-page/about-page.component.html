@@ -1,5 +1,4 @@
 <app-navigation></app-navigation>
-<!-- have something that switches between the short version and the long version? -->
 <div class="app-page-container about-page">
   <h1 class="heading">about</h1>
   <div class="heading-buttons">
@@ -22,7 +21,7 @@
   </div>
   <div [@fader]="short ? 'open' : 'closed'">
     <div class="short-version" *ngIf="short">
-      <div class="section-container">
+      <section class="section-container">
         <h2
           class="section-header"
           (click)="toggleShowHide(0)"
@@ -30,21 +29,18 @@
         >
           languages & frameworks
         </h2>
-        <div
-          class="section-text"
+        <ul
+          role="list"
+          class="languages-and-frameworks"
           [@showHide]="sectionIsOpen[0]"
-          (click)="toggleShowHide(0)"
         >
-          <div>JavaScript / TypeScript / Python</div>
-          <div>Angular / React</div>
-          <div>CSS3 / HTML / Sass</div>
-          <div>Material / Bootstrap</div>
-          <div>Django / SQL / Various Libraries</div>
-          <div>Stack Overflow / YouTube / MDN</div>
-        </div>
-      </div>
+          <li>JavaScript / TypeScript / Python</li>
+          <li>Angular / RxJS / NgRx / Material</li>
+          <li>CSS3 / HTML5 / Sass</li>
+        </ul>
+      </section>
 
-      <div class="section-container">
+      <section class="section-container">
         <h2
           class="section-header"
           (click)="toggleShowHide(1)"
@@ -52,13 +48,13 @@
         >
           coding experience
         </h2>
-        <div class="section-text" [@showHide]="sectionIsOpen[1]">
-          <div>
-            Dec 2019 - Present
-            <span class="app-bold-text">Application Development Engineer</span>,
+        <div [@showHide]="sectionIsOpen[1]">
+          <div class="experience-subheader app-bold-text">
+            Dec 2019 - Present <br />
+            Application Development Engineer <br />
             NOV - Houston, TX
           </div>
-          <ul>
+          <ul role="list">
             <li>
               Refactor one of the company’s oldest applications into a modern,
               responsive Angular application
@@ -71,8 +67,9 @@
             <li>Perform code review in an agile environment</li>
           </ul>
         </div>
-      </div>
-      <div class="section-container">
+      </section>
+
+      <section class="section-container">
         <h2
           class="section-header"
           (click)="toggleShowHide(2)"
@@ -80,26 +77,105 @@
         >
           other experience
         </h2>
-        <div class="section-text" [@showHide]="sectionIsOpen[2]">
-          <div>
-            Dec 2019 - Present Application Development Engineer, NOV - Houston,
-            TX
+        <div [@showHide]="sectionIsOpen[2]">
+          <div class="experience-subheader app-bold-text">
+            SEP 2014 - FEB 2019 <br />
+            Resource Analyst II <br />
+            Alfa Insurance - Montgomery, AL
           </div>
-          <ul>
+          <ul role="list">
             <li>
-              Refactor one of the company’s oldest applications into a modern,
-              responsive web application
+              Assisted company representatives with software related issues
+              across a variety of web and mobile applications
             </li>
             <li>
-              Collaborate with non-technical colleagues and UI/UX to streamline
-              development in a fully remote setting
+              Provided technical assistance for customer-facing applications, as
+              well as additional support for regular call-center operations
             </li>
-            <li>Create and instruct training workshops for peers</li>
-            <li>Perform code review in an agile environment</li>
+            <li>
+              Leveraged expansive knowledge of best practices to train new
+              employees and create training documents
+            </li>
+          </ul>
+          <hr />
+
+          <div class="experience-subheader app-bold-text">
+            FEB 2014 - SEP 2014 <br />
+            Internet Sales Consultant <br />
+            Captiol Hyundai - Montgomery, AL
+          </div>
+          <ul role="list">
+            <li>
+              Created promotional events at various locations to generate new
+              sales leads
+            </li>
+            <li>Automated tasks such as e-mail blasts for the company</li>
+            <li>Communicated both remotely and in-person with clients</li>
+          </ul>
+          <hr />
+
+          <div class="experience-subheader app-bold-text">
+            AUG 2013 - FEB 2014 <br />
+            Bartender <br />
+            Aviator Bar - Montgomery, AL
+          </div>
+          <hr />
+
+          <div class="experience-subheader app-bold-text">
+            AUG 2012 - MAY 2013 <br />
+            Writing Intern <br />
+            Auburn University Montgomery - AL
+          </div>
+          <ul role="list">
+            <li>
+              Tutored undergraduate students taking APA writing-intensive
+              classes as well as trained students in core educational skills
+              such as time management
+            </li>
+            <li>
+              Led APA style workshops and provided content for the department
+              website
+            </li>
+            <li>
+              Worked independently, scheduling appointments with students and
+              professors as needed
+            </li>
+          </ul>
+          <hr />
+
+          <div class="experience-subheader app-bold-text">
+            AUG 2008 - AUG 2013 <br />
+            Bartender <br />
+            Maxwell Club - Montgomery, AL
+          </div>
+          <hr />
+
+          <div class="experience-subheader app-bold-text">
+            JUL 2006 - APR 2008 <br />
+            Bar Manager <br />
+            Moody's Sports Bar - Montgomery, AL
+          </div>
+          <hr />
+
+          <div class="experience-subheader app-bold-text">
+            JUL 2002 - JUL 2006 <br />
+            Psychological Operations Specialist <br />
+            US Army - Fort Bragg, NC
+          </div>
+          <ul role="list">
+            <li>
+              Operated and evaluated a prototype remotely piloted aircraft
+              system
+            </li>
+            <li>
+              Conducted target audience analysis and synthesized gathered
+              information into reports
+            </li>
+            <li>Designed, created, and disseminated print and radio media</li>
           </ul>
         </div>
-      </div>
-      <div class="section-container">
+      </section>
+      <section class="section-container">
         <h2
           class="section-header"
           (click)="toggleShowHide(3)"
@@ -107,8 +183,28 @@
         >
           education
         </h2>
-        <div class="section-text" [@showHide]="sectionIsOpen[3]">sutff</div>
-      </div>
+        <div class="section-text" [@showHide]="sectionIsOpen[3]">
+          <div class="experience-subheader app-bold-text">
+            JUL 2019 - NOV 2019 <br />
+            Fullstack Programming <br />
+            Byte Academy - Houston, TX
+          </div>
+          <hr />
+
+          <div class="experience-subheader app-bold-text">
+            JAN 2010 - MAY 2013 <br />
+            BS In Psychology <br />
+            Auburn University Montgomery, AL
+          </div>
+          <hr />
+
+          <div class="experience-subheader app-bold-text">
+            MAY 2003 - NOV 2003 <br />
+            Korean Language <br />
+            Special Warfare Center - Fort Bragg, NC
+          </div>
+        </div>
+      </section>
     </div>
 
     <div class="long-version" *ngIf="!short">
