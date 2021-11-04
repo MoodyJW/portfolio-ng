@@ -4,6 +4,7 @@ TODO:
 
 - [ ] about
   - [ ] short version
+    - [ ] change content to an iterable, too fucking much in the template
     - [x] languages and frameworks
     - [x] experience
     - [x] education

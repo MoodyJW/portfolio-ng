@@ -27,7 +27,24 @@
           (click)="toggleShowHide(0)"
           [ngClass]="sectionIsOpen[0] === 'open' ? 'open' : 'closed'"
         >
-          languages & frameworks
+          languages & frameworks<svg
+            [@rotatedState]="rotatedState[0]"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-narrow-right"
+            width="22"
+            height="22"
+            viewBox="0 0 24 18"
+            stroke-width="1.5"
+            stroke="#ffffffee"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <line x1="15" y1="16" x2="19" y2="12" />
+            <line x1="15" y1="8" x2="19" y2="12" />
+          </svg>
         </h2>
         <ul
           role="list"
@@ -46,7 +63,24 @@
           (click)="toggleShowHide(1)"
           [ngClass]="sectionIsOpen[1] === 'open' ? 'open' : 'closed'"
         >
-          coding experience
+          coding experience<svg
+            [@rotatedState]="rotatedState[1]"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-narrow-right"
+            width="22"
+            height="22"
+            viewBox="0 0 24 18"
+            stroke-width="1.5"
+            stroke="#ffffffee"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <line x1="15" y1="16" x2="19" y2="12" />
+            <line x1="15" y1="8" x2="19" y2="12" />
+          </svg>
         </h2>
         <div [@showHide]="sectionIsOpen[1]">
           <div class="experience-subheader app-bold-text">
@@ -75,7 +109,24 @@
           (click)="toggleShowHide(2)"
           [ngClass]="sectionIsOpen[2] === 'open' ? 'open' : 'closed'"
         >
-          other experience
+          other experience<svg
+            [@rotatedState]="rotatedState[2]"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-narrow-right"
+            width="22"
+            height="22"
+            viewBox="0 0 24 18"
+            stroke-width="1.5"
+            stroke="#ffffffee"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <line x1="15" y1="16" x2="19" y2="12" />
+            <line x1="15" y1="8" x2="19" y2="12" />
+          </svg>
         </h2>
         <div [@showHide]="sectionIsOpen[2]">
           <div class="experience-subheader app-bold-text">
@@ -181,7 +232,24 @@
           (click)="toggleShowHide(3)"
           [ngClass]="sectionIsOpen[3] === 'open' ? 'open' : 'closed'"
         >
-          education
+          education<svg
+            [@rotatedState]="rotatedState[3]"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-narrow-right"
+            width="22"
+            height="22"
+            viewBox="0 0 24 18"
+            stroke-width="1.5"
+            stroke="#ffffffee"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <line x1="15" y1="16" x2="19" y2="12" />
+            <line x1="15" y1="8" x2="19" y2="12" />
+          </svg>
         </h2>
         <div class="section-text" [@showHide]="sectionIsOpen[3]">
           <div class="experience-subheader app-bold-text">

@@ -58,6 +58,9 @@
       .section-header {
         margin: 3vh 0;
         transition: 900ms;
+        display: flex;
+        gap: 1vw;
+        align-items: center;
 
         &.open {
           text-shadow: 0 0 5px hsl(312, 26%, 56%);
