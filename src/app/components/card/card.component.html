@@ -1,0 +1,16 @@
+<figure class="card" [ngClass]="content.openState">
+  <div class="trapdoor" [ngClass]="content.openState">
+    <div class="top door">
+      <h2>{{ content.title }}</h2>
+    </div>
+    <div class="bottom door">
+      <p>{{ content.description }}</p>
+    </div>
+    <div class="door-content" *ngIf="content.openState === 'open'">
+      <p>{{ content.details }}</p>
+      <a target="_blank" href="{{ content.url }}" role="button"
+        >product website</a
+      >
+    </div>
+  </div>
+</figure>

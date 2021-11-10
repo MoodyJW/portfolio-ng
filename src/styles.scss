@@ -1,6 +1,6 @@
 :root {
   --background-primary: #333;
-  --text-primary: rgba(255, 255, 255, 0.934);
+  --primary-text-color: rgba(255, 255, 255, 0.934);
 }
 
 * {
@@ -36,7 +36,7 @@ body {
     hsla(312, 11%, 48%, 1) 97%
   );
 
-  color: var(--text-primary);
+  color: var(--primary-text-color);
 }
 
 a,
@@ -55,4 +55,10 @@ a:active {
 
 .app-bold-text {
   font-weight: 500;
+}
+
+.app-heading {
+  letter-spacing: 1vw;
+  margin-right: -1vw;
+  font-size: 3em;
 }

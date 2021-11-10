@@ -1,0 +1,124 @@
+.card {
+  height: 20vh;
+  background-color: var(--background-primary);
+  border-radius: 1em;
+  border: none;
+  padding: 5px;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+  color: var(--primary-text-color);
+  box-shadow: 0px 2px 10px 5px var(--primary-text-color);
+
+  &:hover {
+    cursor: pointer;
+
+    box-shadow: 0px 2px 10px 5px hsl(312, 11%, 48%);
+  }
+
+  &.open {
+    box-shadow: 0px 0px 5px 1px hsl(312, 11%, 48%);
+  }
+
+  .trapdoor {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    -webkit-transition: background 400ms ease-in-out;
+    -moz-transition: background 400ms ease-in-out;
+    -ms-transition: background 400ms ease-in-out;
+    -o-transition: background 400ms ease-in-out;
+    transition: background 400ms ease-in-out;
+
+    border-radius: 1em;
+    border: none;
+    &.open {
+      // background: #fff;
+
+      .door {
+        border: none;
+      }
+
+      .top {
+        top: -50%;
+
+        box-shadow: 0px -2px 5px 1px hsl(312, 11%, 48%);
+        // border-radius: 1em;
+      }
+
+      .bottom {
+        top: 100%;
+
+        box-shadow: 0px 2px 5px 1px hsl(312, 11%, 48%);
+        // border-radius: 1em;
+      }
+    }
+    .door {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .door-content {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      a {
+        align-self: end;
+      }
+    }
+  }
+
+  .top {
+    top: 0%;
+    left: 0px;
+    border-radius: 1em;
+
+    &:before {
+      top: 5px;
+    }
+  }
+
+  .bottom {
+    top: 50%;
+    left: 0px;
+    border-radius: 1em;
+
+    &:before {
+      top: -20px;
+    }
+  }
+
+  .door {
+    -webkit-transition: top 400ms, box-shadow 200ms, -webkit-transform 300ms;
+    -moz-transition: top 400ms, box-shadow 200ms, -moz-transform 300ms;
+    -ms-transition: top 400ms, box-shadow 200ms, -ms-transform 300ms;
+    -o-transition: top 400ms, box-shadow 200ms, -o-transform 300ms;
+    transition: top 400ms, box-shadow 200ms, transform 300ms;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    background-color: var(--background-primary);
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    height: 50%;
+
+    &:before {
+      position: absolute;
+      margin-left: -20px;
+      font-size: 35px;
+      display: block;
+      // color: #4099ff;
+      // content: "\e000";
+      width: 0px;
+      height: 20px;
+      left: 52%;
+    }
+  }
+}

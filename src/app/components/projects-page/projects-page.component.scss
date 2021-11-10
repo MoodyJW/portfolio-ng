@@ -1,0 +1,13 @@
+.projects-page {
+  font-family: "Fira Mono", monospace;
+  display: flex;
+  flex-direction: column;
+
+  .projects-heading {
+    margin: 0 0 10vh 0;
+  }
+
+  .card-container {
+    margin: 0 0 10vh 0;
+  }
+}
