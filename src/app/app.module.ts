@@ -9,6 +9,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { ProjectsPageComponent } from './components/projects-page/projects-page.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     ProjectsPageComponent,
     AboutPageComponent,
     NavigationComponent,
+    CardComponent,
   ],
   imports: [AppRoutingModule, BrowserAnimationsModule, BrowserModule],
   providers: [],

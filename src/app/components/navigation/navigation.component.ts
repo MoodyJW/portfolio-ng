@@ -11,6 +11,7 @@ import { filter, takeUntil } from 'rxjs/operators';
 export class NavigationComponent implements OnInit, OnDestroy {
   pathName: string = '';
   unsubscribe$ = new Subject();
+
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.data
       .pipe(
