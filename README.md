@@ -12,10 +12,10 @@ TODO:
   - [ ] long version
     - [ ] write an essay no one will read
 - [x] home
-- [ ] projects
-  - [ ] add FE mentor projects
-  - [ ] max-mt blurb or something
-  - [ ] climathon thing
+- [x] projects
+  - [x] add FE mentor projects
+  - [x] max-mt blurb or something
+  - [x] climathon thing
 - [x] navigation
 - [ ] styles
   - [ ] mobile
@@ -23,8 +23,8 @@ TODO:
       - [ ] short
       - [ ] long
     - [x] home
-    - [ ] projects
-      - [ ] all of it
+    - [x] projects
+      - [x] all of it
     - [ ] navigation
       - [x] header
       - [] footer

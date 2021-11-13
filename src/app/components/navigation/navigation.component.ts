@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
@@ -8,7 +8,7 @@ import { filter, takeUntil } from 'rxjs/operators';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss'],
 })
-export class NavigationComponent implements OnInit, OnDestroy {
+export class NavigationComponent implements OnDestroy {
   pathName: string = '';
   unsubscribe$ = new Subject();
 
@@ -19,10 +19,6 @@ export class NavigationComponent implements OnInit, OnDestroy {
         takeUntil(this.unsubscribe$)
       )
       .subscribe((data) => (this.pathName = data.pathName));
-  }
-
-  ngOnInit(): void {
-    console.log(this.pathName);
   }
 
   ngOnDestroy(): void {
