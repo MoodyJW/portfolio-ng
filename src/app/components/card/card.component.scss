@@ -5,13 +5,14 @@
   border: none;
   padding: 5px;
   -webkit-transition-duration: 400ms;
+  -moz-transition-duration: 400ms;
+  -ms-transition-duration: 400ms;
+  -o-transition-duration: 400ms;
   transition-duration: 400ms;
   color: var(--primary-text-color);
   box-shadow: 0px 2px 10px 5px var(--primary-text-color);
 
   &:hover {
-    cursor: pointer;
-
     box-shadow: 0px 2px 10px 5px hsl(312, 11%, 48%);
   }
 
@@ -21,6 +22,9 @@
 
   .trapdoor {
     -webkit-transform: translateZ(0px);
+    -moz-transform: translateZ(0px);
+    -o-transform: translateZ(0px);
+    -ms-transform: translateZ(0px);
     transform: translateZ(0px);
     -webkit-font-smoothing: antialiased;
     height: 100%;
@@ -29,34 +33,28 @@
     -ms-transition: background 400ms ease-in-out;
     -o-transition: background 400ms ease-in-out;
     transition: background 400ms ease-in-out;
-
     border-radius: 1em;
     border: none;
     &.open {
-      // background: #fff;
-
       .door {
         border: none;
       }
 
       .top {
         top: -50%;
-
         box-shadow: 0px -2px 5px 1px hsl(312, 11%, 48%);
-        // border-radius: 1em;
       }
 
       .bottom {
         top: 100%;
-
         box-shadow: 0px 2px 5px 1px hsl(312, 11%, 48%);
-        // border-radius: 1em;
       }
     }
     .door {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
 
     .door-content {
@@ -66,7 +64,18 @@
       gap: 8px;
 
       a {
-        align-self: end;
+        position: absolute;
+        right: 8px;
+        bottom: 10px;
+        color: hsl(313, 24%, 50%);
+
+        &:visited {
+          color: hsl(313, 100%, 49%);
+        }
+
+        &:hover {
+          color: hsl(313, 100%, 49%);
+        }
       }
     }
   }
@@ -76,8 +85,34 @@
     left: 0px;
     border-radius: 1em;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &:before {
       top: 5px;
+    }
+
+    .toggle-icon {
+      svg {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        -webkit-transition: all 400ms;
+        -moz-transition: all 400ms;
+        -ms-transition: all 400ms;
+        -o-transition: all 400ms;
+        transition: all 400ms;
+        fill: hsl(313, 24%, 50%);
+
+        &.open {
+          -webkit-transform: rotate(-180deg);
+          -moz-transform: rotate(-180deg);
+          -ms-transform: rotate(-180deg);
+          -o-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+        }
+      }
     }
   }
 
@@ -85,6 +120,10 @@
     top: 50%;
     left: 0px;
     border-radius: 1em;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &:before {
       top: -20px;
@@ -114,8 +153,6 @@
       margin-left: -20px;
       font-size: 35px;
       display: block;
-      // color: #4099ff;
-      // content: "\e000";
       width: 0px;
       height: 20px;
       left: 52%;

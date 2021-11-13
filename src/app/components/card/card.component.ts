@@ -1,12 +1,5 @@
-import { Component, Input } from '@angular/core';
-
-export interface Project {
-  title: string;
-  description: string;
-  details: string;
-  url: string;
-  openState: string;
-}
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Project } from '../projects-page/projects-page.component';
 
 @Component({
   selector: 'app-card',
@@ -19,10 +12,8 @@ export class CardComponent {
     description: '',
     details: '',
     url: '',
+    urlText: '',
     openState: 'closed',
   };
-  mainState: string = 'open';
-  detailsState = 'closed';
-  detailsShown = false;
-  clicked = false;
+  @Output() openState = new EventEmitter();
 }

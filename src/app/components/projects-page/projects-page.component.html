@@ -3,8 +3,11 @@
   <h1 class="app-heading projects-heading">projects</h1>
   <div>
     <ng-container *ngFor="let project of projects; index as i">
-      <section class="card-container" (click)="toggleOpenState(i)">
-        <app-card [content]="project"></app-card>
+      <section class="card-container">
+        <app-card
+          [content]="project"
+          (openState)="toggleOpenState($event)"
+        ></app-card>
       </section>
     </ng-container>
   </div>
