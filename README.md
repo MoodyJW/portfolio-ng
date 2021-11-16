@@ -25,9 +25,9 @@ TODO:
     - [x] home
     - [x] projects
       - [x] all of it
-    - [ ] navigation
+    - [x] navigation
       - [x] header
-      - [] footer
+      - [x] footer
   - [ ] desktop
     - [ ] all of it, but after mobile is done
   - [ ] clean up, organize, remove unused, etc
