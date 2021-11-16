@@ -39,6 +39,10 @@ export class NavigationComponent implements OnDestroy {
       url: 'https://github.com/MoodyJW',
       title: '',
     },
+    {
+      url: 'https://leetcode.com/MoodyJW/',
+      title: '',
+    },
   ];
 
   constructor(private activatedRoute: ActivatedRoute) {
