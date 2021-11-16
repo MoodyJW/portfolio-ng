@@ -27,13 +27,13 @@
       color: var(--primary-text-color);
 
       &.selected {
-        background: hsl(312, 26%, 56%);
-        box-shadow: 0px 2px 10px 5px hsl(312, 26%, 56%);
+        background: var(--shadow-color);
+        box-shadow: 0px 2px 10px 5px var(--shadow-color);
       }
     }
 
     .version-button:hover {
-      box-shadow: 0px 2px 10px 5px hsl(312, 26%, 56%);
+      box-shadow: 0px 2px 10px 5px var(--shadow-color);
 
       &:not(.selected) {
         cursor: pointer;
@@ -57,10 +57,10 @@
         align-items: center;
 
         &.open {
-          text-shadow: 0 0 5px hsl(312, 26%, 56%);
+          text-shadow: 0 0 5px var(--shadow-color);
         }
         &:hover {
-          text-shadow: 0 0 5px hsl(312, 26%, 56%);
+          text-shadow: 0 0 5px var(--shadow-color);
           cursor: pointer;
         }
       }

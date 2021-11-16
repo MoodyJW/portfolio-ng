@@ -141,6 +141,33 @@ export const stepper = trigger('routeAnimations', [
       ],
       optional
     ),
+    query(
+      '.navigation-link',
+      [
+        style({
+          pointerEvents: 'none',
+        }),
+      ],
+      optional
+    ),
+    query(
+      '.version-button',
+      [
+        style({
+          pointerEvents: 'none',
+        }),
+      ],
+      optional
+    ),
+    query(
+      '.section-header',
+      [
+        style({
+          pointerEvents: 'none',
+        }),
+      ],
+      optional
+    ),
     group([
       query(
         ':enter',

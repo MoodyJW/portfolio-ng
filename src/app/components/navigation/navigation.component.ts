@@ -3,6 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 
+export interface NavLink {
+  url: string;
+  title: string;
+}
+
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -11,8 +16,32 @@ import { filter, takeUntil } from 'rxjs/operators';
 export class NavigationComponent implements OnDestroy {
   pathName: string = '';
   unsubscribe$ = new Subject();
+  routerLinks: NavLink[] = [
+    {
+      url: '/home',
+      title: 'home',
+    },
+    {
+      url: '/about',
+      title: 'about',
+    },
+    {
+      url: '/projects',
+      title: 'projects',
+    },
+  ];
+  footerLinks: NavLink[] = [
+    {
+      url: 'https://www.linkedin.com/in/jasonwmoody/',
+      title: '',
+    },
+    {
+      url: 'https://github.com/MoodyJW',
+      title: '',
+    },
+  ];
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private activatedRoute: ActivatedRoute) {
     this.activatedRoute.data
       .pipe(
         filter((data) => !!data),

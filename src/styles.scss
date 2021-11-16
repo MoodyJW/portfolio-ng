@@ -1,6 +1,8 @@
 :root {
   --background-primary: #333;
   --primary-text-color: rgba(255, 255, 255, 0.934);
+  --visited-text-color: hsla(307, 53%, 42%, 0.797);
+  --shadow-color: hsl(312, 26%, 56%);
 }
 
 * {
@@ -48,7 +50,7 @@ a:active {
 }
 
 .app-page-container {
-  height: 84vh;
+  height: 90vh;
   overflow: scroll;
   padding: 1em;
 }
@@ -61,4 +63,8 @@ a:active {
   letter-spacing: 1vw;
   margin-right: -1vw;
   font-size: 3em;
+}
+
+.glowing {
+  text-shadow: 0px 2px 10px;
 }
