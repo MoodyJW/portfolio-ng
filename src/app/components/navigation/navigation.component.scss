@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em;
-  height: 8vh;
+  padding: 0.7em;
+  height: 5vh;
 
   .horizontal-line {
     width: 100%;
@@ -12,13 +12,14 @@
 
   .footer-navigation {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 2;
-    height: 8vh;
+    height: 5vh;
+    padding: 0.7em;
   }
 }

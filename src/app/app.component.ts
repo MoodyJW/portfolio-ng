@@ -1,7 +1,8 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { slider, transformer, fader, stepper } from './route-animations';
+import { stepper } from './route-animations';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
