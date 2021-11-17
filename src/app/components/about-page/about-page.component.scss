@@ -4,6 +4,16 @@
   flex-direction: column;
   gap: 5vh 0;
 
+  .heading-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    app-contact-button {
+      align-self: flex-end;
+    }
+  }
+
   .section-container {
     section {
       .section-header {
@@ -16,10 +26,6 @@
         &.open {
           text-shadow: 0 0 5px var(--shadow-color);
         }
-        // &:hover {
-        //   text-shadow: 0 0 5px var(--shadow-color);
-        //   cursor: pointer;
-        // }
       }
 
       .experience-container {

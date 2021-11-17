@@ -11,6 +11,7 @@ import { AboutPageComponent } from './components/about-page/about-page.component
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { CardComponent } from './components/card/card.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { ContactButtonComponent } from './components/contact-button/contact-button.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ModalComponent } from './components/modal/modal.component';
     NavigationComponent,
     CardComponent,
     ModalComponent,
+    ContactButtonComponent,
   ],
   imports: [AppRoutingModule, BrowserAnimationsModule, BrowserModule],
   providers: [],
