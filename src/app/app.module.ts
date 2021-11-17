@@ -10,6 +10,7 @@ import { ProjectsPageComponent } from './components/projects-page/projects-page.
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { CardComponent } from './components/card/card.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CardComponent } from './components/card/card.component';
     AboutPageComponent,
     NavigationComponent,
     CardComponent,
+    ModalComponent,
   ],
   imports: [AppRoutingModule, BrowserAnimationsModule, BrowserModule],
   providers: [],
