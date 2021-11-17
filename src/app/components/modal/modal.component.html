@@ -1,0 +1,18 @@
+<div class="open-button-container">
+  <hr class="horizontal-line" />
+  <button class="open-button" (click)="toggleModal()">more info</button>
+</div>
+<figure class="modal-container" *ngIf="showModal" (click)="toggleModal()">
+  <div class="modal" (click)="preventToggle($event)">
+    <div class="modal-content">
+      <h1>
+        {{ content.title }} <br />
+        {{ content.date }}
+      </h1>
+      <ul>
+        <li *ngFor="let detail of content.details">{{ detail }}</li>
+      </ul>
+      <button class="close-button" (click)="toggleModal()">x</button>
+    </div>
+  </div>
+</figure>

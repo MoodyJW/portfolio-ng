@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { fader, showHide, rotatedState } from '../../component-animations';
+import { ABOUT_SECTIONS } from './about.constants';
 
 @Component({
   selector: 'app-about-page',
@@ -9,15 +10,21 @@ import { fader, showHide, rotatedState } from '../../component-animations';
 })
 export class AboutPageComponent {
   short = true;
-  sectionIsOpen = [...Array(4)].map(() => 'closed');
-  rotatedState = [...Array(4)].map(() => 'default');
-
-  constructor() {}
+  sections = ABOUT_SECTIONS;
+  sectionIsOpen = [...Array(this.sections.length)].map(() => 'closed');
+  rotatedState = [...Array(this.sections.length)].map(() => 'default');
 
   toggleShowHide(index: number): void {
-    this.rotatedState[index] =
-      this.rotatedState[index] === 'default' ? 'rotated' : 'default';
-    this.sectionIsOpen[index] =
-      this.sectionIsOpen[index] === 'closed' ? 'open' : 'closed';
+    this.rotatedState.forEach((rotatedState, i) => {
+      if (index === i) {
+        this.rotatedState[i] =
+          rotatedState === 'rotated' ? 'default' : 'rotated';
+      } else this.rotatedState[i] = 'default';
+    });
+    this.sectionIsOpen.forEach((openState, i) => {
+      if (index === i) {
+        this.sectionIsOpen[i] = openState === 'open' ? 'closed' : 'open';
+      } else this.sectionIsOpen[i] = 'closed';
+    });
   }
 }

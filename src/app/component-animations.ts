@@ -46,11 +46,11 @@ export const fader = trigger('fader', [
 export const showHide = trigger('showHide', [
   state('closed', style({ height: '0px', overflow: 'hidden' })),
   state('open', style({ height: '*', overflow: 'hidden' })),
-  transition('open <=> closed', animate('900ms ease-in-out')),
+  transition('open <=> closed', animate('400ms ease-in-out')),
 ]);
 
 export const rotatedState = trigger('rotatedState', [
   state('default', style({ transform: 'rotate(0)' })),
   state('rotated', style({ transform: 'rotate(90deg)' })),
-  transition('rotated <=> default', animate('900ms ease-out')),
+  transition('rotated <=> default', animate('400ms ease-out')),
 ]);

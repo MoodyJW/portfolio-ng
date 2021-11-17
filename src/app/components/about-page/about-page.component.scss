@@ -4,54 +4,11 @@
   flex-direction: column;
   gap: 5vh 0;
 
-  .heading-buttons {
-    display: flex;
-    gap: 5vw;
-    justify-content: center;
-
-    .version-button {
-      border-radius: 1em;
-      align-self: center;
-      position: relative;
-      background-color: transparent;
-      border: none;
-      padding: 10px;
-      width: 40vw;
-      height: 10vh;
-      font-size: 1.5em;
-      text-align: center;
-      -webkit-transition-duration: 0.4s;
-      transition-duration: 0.4s;
-      text-decoration: none;
-      overflow: hidden;
-      color: var(--primary-text-color);
-
-      &.selected {
-        background: var(--shadow-color);
-        box-shadow: 0px 2px 10px 5px var(--shadow-color);
-      }
-    }
-
-    .version-button:hover {
-      box-shadow: 0px 2px 10px 5px var(--shadow-color);
-
-      &:not(.selected) {
-        cursor: pointer;
-      }
-    }
-
-    .version-button:active:after {
-      padding: 0;
-      margin: 0;
-      opacity: 1;
-      transition: 0s;
-    }
-  }
-  .short-version {
-    .section-container {
+  .section-container {
+    section {
       .section-header {
         margin: 3vh 0;
-        transition: 900ms;
+        transition: 400ms;
         display: flex;
         gap: 1vw;
         align-items: center;
@@ -59,32 +16,26 @@
         &.open {
           text-shadow: 0 0 5px var(--shadow-color);
         }
-        &:hover {
-          text-shadow: 0 0 5px var(--shadow-color);
-          cursor: pointer;
+        // &:hover {
+        //   text-shadow: 0 0 5px var(--shadow-color);
+        //   cursor: pointer;
+        // }
+      }
+
+      .experience-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 12px;
+        gap: 24px;
+
+        .experience-details {
+          padding-bottom: 1vh;
+          font-size: 14px;
+          gap: 12px;
+          display: flex;
+          flex-direction: column;
         }
       }
-
-      .experience-subheader {
-        padding-bottom: 1vh;
-      }
-
-      hr {
-        margin: 3vh 0;
-      }
     }
-  }
-}
-
-ul {
-  list-style-position: inside;
-
-  &.languages-and-frameworks li {
-    list-style: none;
-  }
-
-  &:not(.languages-and-frameworks) li {
-    list-style-image: url("../../../assets/list-rectangle-bullet.svg");
-    padding-bottom: 1vh;
   }
 }
