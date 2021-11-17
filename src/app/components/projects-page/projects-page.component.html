@@ -1,6 +1,9 @@
 <app-navigation></app-navigation>
 <div class="app-page-container projects-page">
-  <h1 class="app-heading projects-heading">projects</h1>
+  <div class="heading-container">
+    <h1 class="app-heading">projects</h1>
+    <app-contact-button></app-contact-button>
+  </div>
   <div>
     <ng-container *ngFor="let project of projects; index as i">
       <section class="card-container">
