@@ -2,6 +2,7 @@ export interface AboutSection {
   header: string;
   content: {
     jobTitle: string;
+    otherTitle?: string[];
     moreInfo: {
       title: string;
       details: string[];
@@ -15,9 +16,12 @@ export const ABOUT_SECTIONS: AboutSection[] = [
     header: 'languages & frameworks',
     content: [
       {
-        jobTitle: `JavaScript / TypeScript / Python
-          Angular / RxJS / NgRx / Material
-          CSS3 / HTML5 / Sass`,
+        jobTitle: ``,
+        otherTitle: [
+          `JavaScript / TypeScript / Python`,
+          `Angular / RxJS / NgRx / Material`,
+          `CSS3 / HTML5 / Sass`,
+        ],
         moreInfo: {
           title: '',
           details: [],

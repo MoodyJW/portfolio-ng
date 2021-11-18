@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 .card {
   height: 20vh;
   background-color: var(--primary-background-color);
@@ -18,6 +20,14 @@
 
   &.open {
     box-shadow: 0px 0px 5px 1px var(--shadow-color);
+  }
+
+  @include respond-to("medium") {
+    height: 30vh;
+  }
+
+  @include respond-to("xx-large") {
+    height: 40vh;
   }
 
   .trapdoor {
@@ -57,6 +67,14 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
+      h2 {
+        font-size: 1.5em;
+
+        @include respond-to("medium") {
+          font-size: 2em;
+        }
+      }
     }
 
     .door-content {
@@ -64,12 +82,32 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      line-height: 22px;
+
+      p {
+        font-size: 1em;
+        line-height: 1.2em;
+
+        @include respond-to("small") {
+          font-size: 1.2em;
+          // line-height: 1em;
+        }
+
+        @include respond-to("medium") {
+          font-size: 1.4em;
+          line-height: 1.4em;
+        }
+
+        @include respond-to("large") {
+          font-size: 1.6em;
+
+          line-height: 1.6em;
+        }
+      }
 
       a {
         position: absolute;
         right: 8px;
-        bottom: 10px;
+        bottom: 7px;
         color: hsl(313, 24%, 50%);
 
         &:visited {
@@ -78,6 +116,18 @@
 
         &:hover {
           color: var(--visited-text-color);
+        }
+
+        @include respond-to("small") {
+          font-size: 1.1em;
+        }
+
+        @include respond-to("medium") {
+          font-size: 1.3em;
+        }
+
+        @include respond-to("large") {
+          font-size: 1.5em;
         }
       }
     }
@@ -130,6 +180,18 @@
 
     &:before {
       top: -20px;
+    }
+
+    p {
+      font-size: 1em;
+
+      @include respond-to("medium") {
+        font-size: 1.3em;
+      }
+
+      @include respond-to("large") {
+        font-size: 1.5em;
+      }
     }
   }
 
