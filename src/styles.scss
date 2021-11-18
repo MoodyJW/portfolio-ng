@@ -31,6 +31,7 @@ $breakpoints: (
   --primary-background-color: #333;
   --primary-text-color: rgba(255, 255, 255, 0.934);
   --visited-text-color: hsla(307, 53%, 42%, 0.797);
+  --secondary-text-color: rgba(223, 201, 222, 0.934);
   --primary-button-color: hsl(312, 26%, 56%);
   --shadow-color: hsl(312, 26%, 56%);
 }
@@ -128,15 +129,15 @@ p {
 @include respond-to("medium") {
   .app-page-container {
     &::-webkit-scrollbar {
-      width: 6px;
+      width: 5px;
       height: 0px;
     }
 
     &::-webkit-scrollbar-thumb {
-      background: var(--primary-text-color);
+      background: var(--secondary-text-color);
 
       &:hover {
-        background: var(--opaque-primary-text);
+        background: var(--primary-button-color);
       }
     }
   }
