@@ -67,17 +67,11 @@
       }
 
       .close-button {
-        border-radius: 1em;
         align-self: flex-end;
         background-color: transparent;
         border: none;
         padding: 0 10px;
         font-size: 2em;
-        text-align: center;
-        -webkit-transition-duration: 400ms;
-        transition-duration: 400ms;
-        text-decoration: none;
-        overflow: hidden;
         color: var(--primary-text-color);
       }
     }

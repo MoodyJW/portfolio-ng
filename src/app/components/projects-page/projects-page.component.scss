@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 .projects-page {
   font-family: "Fira Mono", monospace;
   display: flex;
@@ -6,15 +8,45 @@
   .heading-container {
     display: flex;
     flex-direction: column;
-    margin: 0 0 11vh 0;
     gap: 24px;
 
     app-contact-button {
       align-self: flex-end;
     }
+
+    @include respond-to("small") {
+      flex-direction: row;
+      align-items: center;
+
+      app-contact-button {
+        align-self: unset;
+      }
+    }
+
+    @include respond-to("medium") {
+      flex-direction: row;
+      margin: 0 0 5vh 0;
+      align-items: center;
+    }
+
+    @include respond-to("xx-large") {
+      margin: 0 0 10vh 0;
+    }
   }
 
-  .card-container {
-    margin: 0 0 11vh 0;
+  .project-cards {
+    @include respond-to("medium") {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 48px;
+    }
+
+    @include respond-to("xx-large") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card-container {
+      margin: 11vh 0;
+    }
   }
 }

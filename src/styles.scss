@@ -125,16 +125,19 @@ p {
   text-shadow: 0px 2px 10px;
 }
 
-// larger screens only
-// &::-webkit-scrollbar {
-//   width: 6px;
-//   height: 0px;
-// }
+@include respond-to("medium") {
+  .app-page-container {
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 0px;
+    }
 
-// &::-webkit-scrollbar-thumb {
-//   background: var(--primary-text-color);
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary-text-color);
 
-//   &:hover {
-//     background: var(--opaque-primary-text);
-//   }
-// }
+      &:hover {
+        background: var(--opaque-primary-text);
+      }
+    }
+  }
+}
