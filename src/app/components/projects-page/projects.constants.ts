@@ -2,11 +2,11 @@ import { Project } from './projects-page.component';
 
 export const PROJECTS: Project[] = [
   {
-    title: 'Max™ MT',
+    title: 'Max Maintenance',
     description: 'Industrial Maintenance Platform',
     details:
       'A maintenance application that integrates with an IoT data platform. I work as part of a small team to maintain and expand the application.',
-    url: 'https://www.nov.com/products/max-mt-industrial-maintenance-platform',
+    url: 'https://www.nov.com/products/max-maintenance',
     urlText: 'product site',
     openState: 'closed',
   },

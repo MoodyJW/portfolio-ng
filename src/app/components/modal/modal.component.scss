@@ -28,7 +28,7 @@
   background-color: rgba(0, 0, 0, 0.4);
 
   .modal {
-    background-color: var(--background-primary);
+    background-color: var(----primary-background-color);
     border-radius: 1em;
     border: none;
     padding: 5px;
@@ -42,6 +42,11 @@
       flex-direction: column;
       gap: 12px;
 
+      h1 {
+        line-height: 25px;
+        font-size: 17px;
+      }
+
       ul {
         font-size: 1.2em;
         list-style-position: inside;
@@ -49,6 +54,7 @@
 
         li {
           margin: 12px 0;
+          font-family: "Roboto Mono", monospace;
         }
       }
 

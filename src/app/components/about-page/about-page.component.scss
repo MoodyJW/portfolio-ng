@@ -2,7 +2,7 @@
   font-family: "Fira Mono", monospace;
   display: flex;
   flex-direction: column;
-  gap: 5vh 0;
+  gap: 24px 0;
 
   .heading-container {
     display: flex;
@@ -15,24 +15,23 @@
   }
 
   .section-container {
-    section {
-      .section-header {
-        margin: 3vh 0;
-        transition: 400ms;
-        display: flex;
-        gap: 1vw;
-        align-items: center;
+    margin: 24px 0 0 0;
 
+    section {
+      margin: 0 0 24px 0;
+
+      .section-header {
         &.open {
           text-shadow: 0 0 5px var(--shadow-color);
         }
       }
 
       .experience-container {
+        margin: 24px 0 0 0;
         display: flex;
         flex-direction: column;
         padding: 0 12px;
-        gap: 24px;
+        gap: 28px;
 
         .experience-details {
           padding-bottom: 1vh;

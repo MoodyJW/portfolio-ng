@@ -1,29 +1,30 @@
 TODO:
 
 - [ ] about
-  - [ ] short version
-    - [x] change content to an iterable, too fucking much in the template
-    - [x] languages and frameworks
-    - [x] experience
-    - [x] education
-    - [ ] references? other shit?
-- [ ] home
-  - [ ] add contact button
+  - [x] change content to an iterable, too fucking much in the template
+  - [x] languages and frameworks
+  - [x] experience
+  - [x] education
+  - [ ] references? other shit?
+- [x] home
+  - [x] add contact button
 - [x] projects
   - [x] add FE mentor projects
   - [x] max-mt blurb or something
   - [x] climathon thing
 - [x] navigation
 - [ ] styles
-  - [ ] mobile
+  - [x] mobile
     - [x] about
       - [x] short
-    - [ ] home
+    - [x] home
     - [x] projects
       - [x] all of it
     - [x] navigation
       - [x] header
       - [x] footer
   - [ ] desktop
-    - [ ] all of it, but after mobile is done
+    - [ ] home screen is garbage
+    - [ ] projects grid
+    - [ ] about screen could probably be centered or something, too much empty space
   - [ ] clean up, organize, remove unused, etc

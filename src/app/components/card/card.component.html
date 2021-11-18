@@ -20,7 +20,7 @@
       </div>
       <h2>{{ content.title }}</h2>
     </div>
-    <div class="bottom door" (click)="openState.emit(content)">
+    <div class="bottom door app-bold-text" (click)="openState.emit(content)">
       <p>{{ content.description }}</p>
     </div>
     <div class="door-content" *ngIf="content.openState === 'open'">
