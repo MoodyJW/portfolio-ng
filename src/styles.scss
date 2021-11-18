@@ -1,5 +1,5 @@
 :root {
-  --background-primary: #333;
+  --primary-background-color: #333;
   --primary-text-color: rgba(255, 255, 255, 0.934);
   --visited-text-color: hsla(307, 53%, 42%, 0.797);
   --primary-button-color: hsl(312, 26%, 56%);
@@ -50,22 +50,40 @@ a:active {
   color: inherit;
 }
 
+p {
+  font-family: "Roboto Mono", monospace;
+}
+
 .app-page-container {
   height: 90vh;
-  overflow: scroll;
+  overflow: auto;
   padding: 1em;
+
+  .app-bold-text {
+    font-weight: 500;
+  }
+
+  .app-heading {
+    letter-spacing: 1vw;
+    margin-right: -1vw;
+    font-size: 3em;
+  }
+
+  .glowing {
+    text-shadow: 0px 2px 10px;
+  }
 }
 
-.app-bold-text {
-  font-weight: 500;
-}
+// larger screens only
+// &::-webkit-scrollbar {
+//   width: 6px;
+//   height: 0px;
+// }
 
-.app-heading {
-  letter-spacing: 1vw;
-  margin-right: -1vw;
-  font-size: 3em;
-}
+// &::-webkit-scrollbar-thumb {
+//   background: var(--primary-text-color);
 
-.glowing {
-  text-shadow: 0px 2px 10px;
-}
+//   &:hover {
+//     background: var(--opaque-primary-text);
+//   }
+// }

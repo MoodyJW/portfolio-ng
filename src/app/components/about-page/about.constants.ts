@@ -81,15 +81,15 @@ export const ABOUT_SECTIONS: AboutSection[] = [
         },
       },
       {
-        jobTitle: 'Writing in the Disciplines Intern',
+        jobTitle: 'Writing Tutor',
         moreInfo: {
           title: 'Auburn University Montgomery',
           date: 'AUG 2012 - MAY 2013',
           details: [
-            `Tutored undergraduate students taking APA writing-intensive
+            `Tutored undergraduate science majors taking APA writing-intensive
             classes`,
-            `Trained students in core educational skills
-            such as time management`,
+            `Trained students in core educational skills,
+            such as time management & collaboration`,
             `Led APA style workshops and provided content 
             for the department website`,
             `Worked independently, scheduling appointments 

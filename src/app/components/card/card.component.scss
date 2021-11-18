@@ -1,6 +1,6 @@
 .card {
   height: 20vh;
-  background-color: var(--background-primary);
+  background-color: var(--primary-background-color);
   border-radius: 1em;
   border: none;
   padding: 5px;
@@ -35,6 +35,7 @@
     transition: background 400ms ease-in-out;
     border-radius: 1em;
     border: none;
+
     &.open {
       .door {
         border: none;
@@ -50,6 +51,7 @@
         box-shadow: 0px 2px 5px 1px hsl(312, 11%, 48%);
       }
     }
+
     .door {
       display: flex;
       justify-content: center;
@@ -58,7 +60,7 @@
     }
 
     .door-content {
-      padding: 10px;
+      padding: 12px;
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -142,7 +144,7 @@
     -ms-transition-timing-function: ease-in-out;
     -o-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
-    background-color: var(--background-primary);
+    background-color: var(--primary-background-color);
     position: absolute;
     overflow: hidden;
     width: 100%;
