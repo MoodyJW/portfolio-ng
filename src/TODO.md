@@ -1,0 +1,36 @@
+TODO:
+
+- [x] about
+  - [x] change content to an iterable
+  - [x] languages and frameworks
+  - [x] experience
+  - [x] education
+  - [ ] change the language section, text alignment off on small screens
+  - [ ] references?
+- [x] home
+  - [x] ~~add contact button~~
+- [ ] projects
+  - [x] add FE mentor projects
+  - [x] max-mt blurb or something
+  - [x] climathon thing
+  - [ ] fix links, maybe just embed them in the text instead,
+        styles not great on mobile
+- [x] navigation
+- [ ] create contact menu
+  - [ ] some sort of popover, maybe change based on screen size
+- [x] styles
+  - [x] mobile
+    - [x] about
+      - [x] short
+    - [x] home
+    - [ ] projects
+      - [x] responsive styles
+      - [ ] play with cards staying open
+    - [x] navigation
+      - [x] header
+      - [x] ~~footer~~ footer is all fucked up on mobile chrome, so fuck it, changing it
+  - [x] desktop
+    - [x] home screen is garbage
+    - [x] projects grid
+    - [x] about screen could probably be centered or something, too much empty space
+  - [ ] clean up, organize, remove unused, etc

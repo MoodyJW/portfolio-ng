@@ -11,7 +11,7 @@ import { stepper } from './route-animations';
 })
 export class AppComponent implements OnInit {
   private themeQuery: MediaQueryList;
-  private getScreenWidth: any;
+  private getScreenWidth: number;
 
   public title = 'JWM';
   public isDark = true;
@@ -26,6 +26,16 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(
+      ` %c${String.fromCodePoint(
+        0x1f603
+      )} Thanks for visiting! Please let me know if you find any ${String.fromCodePoint(
+        0x1fab3,
+        0x1fab0,
+        0x1f41c
+      )} or have suggestions to improve the site. Click the contact button or just send an email to: jmoody1813@gmail.com.`,
+      `font-family: Fira Mono, monospace; font-size: 16px; color: 255, 255, 255, 0.934; background-color: #333;padding: 5px`
+    );
     if (this.themeQuery.matches) {
       this.isDark = true;
     } else this.isDark = false;

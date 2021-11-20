@@ -89,7 +89,6 @@
 
         @include respond-to("small") {
           font-size: 1.2em;
-          // line-height: 1em;
         }
 
         @include respond-to("medium") {
@@ -99,7 +98,6 @@
 
         @include respond-to("large") {
           font-size: 1.6em;
-
           line-height: 1.6em;
         }
       }
