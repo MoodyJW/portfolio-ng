@@ -1,73 +1,111 @@
 @import "src/styles.scss";
 
-.home-page {
-  display: flex;
-  flex-direction: column;
-
+.app-page-container.home {
   @include respond-to("x-large") {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
   }
 
-  .name-container {
-    font-size: 1.5em;
-    font-family: "Fira Mono", monospace;
+  .home-page {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5vh;
-
-    @include respond-to("small") {
-      font-size: 2em;
-    }
+    flex-direction: column;
 
     @include respond-to("medium") {
-      font-size: 2.5em;
-    }
-
-    @include respond-to("large") {
-      font-size: 3em;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     @include respond-to("x-large") {
-      font-size: 4em;
-      order: 1;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     @include respond-to("xx-large") {
-      font-size: 4.5em;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .middle {
-      margin-left: 1em;
+    .name-container {
+      font-size: 1.5em;
+      font-family: "Fira Mono", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5vh;
+
+      @include respond-to("small") {
+        font-size: 2em;
+      }
+
+      @include respond-to("medium") {
+        font-size: 2.5em;
+      }
+
+      @include respond-to("large") {
+        font-size: 3em;
+      }
+
+      @include respond-to("x-large") {
+        font-size: 4em;
+      }
+
+      @include respond-to("xx-large") {
+        font-size: 4.5em;
+      }
+
+      .middle {
+        margin-left: 1em;
+      }
+
+      .last {
+        margin-left: 2em;
+      }
     }
 
-    .last {
-      margin-left: 2em;
-    }
-  }
+    .supporting-copy {
+      margin: 10vh 1vw;
 
-  .supporting-copy {
-    margin: 10vh 1vw;
+      @include respond-to("medium") {
+        font-size: 1.3em;
+        text-align: center;
+        order: 3;
+        width: 100%;
+      }
 
-    @include respond-to("x-large") {
-      font-size: 1.3em;
-      text-align: right;
-      order: 3;
-    }
-  }
-
-  .contact-button {
-    align-self: flex-end;
-    margin-right: 1vw;
-
-    @include respond-to("x-large") {
-      order: 2;
-      align-self: center;
+      @include respond-to("x-large") {
+        font-size: 1.3em;
+        text-align: center;
+        order: 3;
+        width: 100%;
+      }
     }
 
-    @include respond-to("xx-large") {
+    .contact-button {
+      align-self: flex-end;
+      margin-right: 1vw;
+
+      @include respond-to("medium") {
+        font-size: 1.3em;
+        text-align: center;
+        order: 2;
+        align-self: center;
+        margin-left: 10em;
+      }
+
+      @include respond-to("large") {
+        font-size: 1.5em;
+      }
+
+      @include respond-to("x-large") {
+        font-size: 1.8em;
+      }
+
+      @include respond-to("xx-large") {
+        font-size: 2.3em;
+      }
     }
   }
 }

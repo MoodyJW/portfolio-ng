@@ -1,30 +1,3 @@
-TODO:
+A developer portfolio I'm building for myself using Angular and Sass. Some of it might be a bit superfluous, but I want to show various aspects of my ability to create interesting components and express my own style as well.
 
-- [ ] about
-  - [x] change content to an iterable, too fucking much in the template
-  - [x] languages and frameworks
-  - [x] experience
-  - [x] education
-  - [ ] references? other shit?
-- [x] home
-  - [x] add contact button
-- [x] projects
-  - [x] add FE mentor projects
-  - [x] max-mt blurb or something
-  - [x] climathon thing
-- [x] navigation
-- [ ] styles
-  - [x] mobile
-    - [x] about
-      - [x] short
-    - [x] home
-    - [x] projects
-      - [x] all of it
-    - [x] navigation
-      - [x] header
-      - [x] footer
-  - [ ] desktop
-    - [ ] home screen is garbage
-    - [ ] projects grid
-    - [ ] about screen could probably be centered or something, too much empty space
-  - [ ] clean up, organize, remove unused, etc
+If you'd like to download it and use it, have at it. Shouldn't be too hard to make it your own. Thanks for reading! Please let me know if you have any suggestions or find bugs. 😃

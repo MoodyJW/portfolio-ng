@@ -1,12 +1,12 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { fader, showHide, rotatedState } from '../../component-animations';
+import { showHide, rotatedState } from '../../component-animations';
 import { ABOUT_SECTIONS } from './about.constants';
 
 @Component({
   selector: 'app-about-page',
   templateUrl: './about-page.component.html',
   styleUrls: ['./about-page.component.scss'],
-  animations: [fader, showHide, rotatedState],
+  animations: [showHide, rotatedState],
 })
 export class AboutPageComponent implements OnInit {
   sections = ABOUT_SECTIONS;

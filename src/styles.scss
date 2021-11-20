@@ -45,7 +45,7 @@ $breakpoints: (
 body {
   font-family: "Roboto Mono", monospace;
   --webkit-font-smoothing: auto;
-  height: 100vh;
+  height: 92vh;
   background: hsla(0, 0%, 14%, 1);
 
   background: radial-gradient(
@@ -85,7 +85,7 @@ p {
 }
 
 .app-page-container {
-  height: 90vh;
+  height: 92vh;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 1em;
