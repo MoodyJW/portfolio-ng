@@ -6,6 +6,7 @@ TODO:
   - [x] experience
   - [x] education
   - [ ] change the language section, text alignment off on small screens
+  - [ ] transition speed on modal
   - [ ] references?
 - [x] home
   - [x] ~~add contact button~~
@@ -16,8 +17,9 @@ TODO:
   - [ ] fix links, maybe just embed them in the text instead,
         styles not great on mobile
 - [x] navigation
-- [ ] create contact menu
-  - [ ] some sort of popover, maybe change based on screen size
+- [x] create contact menu
+  - [x] corner quarter circle
+  - [x] git, LI, leetcode, email, etc
 - [x] styles
   - [x] mobile
     - [x] about

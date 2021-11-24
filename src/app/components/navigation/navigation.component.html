@@ -1,12 +1,14 @@
 <div class="navigation-container">
   <ng-container *ngFor="let link of routerLinks; index as i">
     <a
+      *ngIf="i !== 3"
       class="navigation-link"
       [ngClass]="pathName === link.title ? 'glowing' : 'unset'"
       [routerLink]="link.url"
     >
       {{ link.title }}
     </a>
-    <hr *ngIf="i !== 2" class="horizontal-line" />
+    <hr *ngIf="i !== 3" class="horizontal-line" />
+    <app-contact-button *ngIf="i === 3"></app-contact-button>
   </ng-container>
 </div>
