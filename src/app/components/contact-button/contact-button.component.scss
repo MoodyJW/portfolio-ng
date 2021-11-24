@@ -3,6 +3,7 @@
 .contact-button {
   cursor: pointer;
   outline: 0;
+  width: 65px;
   position: relative;
   border: none;
   background: none;
@@ -18,6 +19,9 @@
 
   &.active {
     z-index: 2;
+    font-weight: 600;
+    color: var(--shadow-color);
+    transform: scale(1.1);
   }
 }
 
@@ -32,7 +36,6 @@
     z-index: 1;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .circular-menu {
@@ -47,14 +50,15 @@
       z-index: 1;
       width: 3em;
       height: 3em;
-      border-radius: 50%;
+      border: none;
       text-align: center;
-      background-color: transparent;
       transition: transform 400ms ease, background 400ms ease,
         color 400ms ease-in-out;
 
       &:hover {
-        box-shadow: 0px 2px 10px var(--primary-text-color);
+        color: var(--shadow-color);
+        text-shadow: 0px 2px 10px var(--primary-background-color);
+        transform: scale(1.1);
       }
     }
   }
@@ -67,7 +71,17 @@
     border-radius: 50%;
     position: absolute;
     top: 0;
-    right: -0.5em;
+    right: 0;
+    background-color: transparent;
+    transition: all 400ms ease-in-out;
+    box-shadow: 0px 2px 10px 5px var(--shadow-color);
+
+    &:not(.is-visible) {
+      visibility: hidden;
+    }
+  }
+
+  .circular-menu.active:after {
     background: hsla(0, 0%, 14%, 1);
     background: radial-gradient(
       circle,
@@ -88,15 +102,6 @@
       hsla(0, 0%, 27%, 1) 77%,
       hsla(312, 11%, 48%, 1) 97%
     );
-    transition: all 400ms ease-in-out;
-    box-shadow: 0px 2px 10px 5px var(--shadow-color);
-
-    &:not(.is-visible) {
-      visibility: hidden;
-    }
-  }
-
-  .circular-menu.active:after {
     transform: scale3d(5.5, 5.5, 1);
     transition-timing-function: cubic-bezier(0.68, 2.55, 0.265, 1);
   }

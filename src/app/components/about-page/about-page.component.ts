@@ -33,7 +33,7 @@ export class AboutPageComponent implements OnInit {
   }
 
   toggleShowHide(index: number): void {
-    if (this.innerWidth && this.innerWidth > 1540) {
+    if (this.innerWidth && this.innerWidth >= 1440) {
       this.rotatedState[index] =
         this.rotatedState[index] === 'rotated' ? 'default' : 'rotated';
       this.sectionIsOpen[index] =
