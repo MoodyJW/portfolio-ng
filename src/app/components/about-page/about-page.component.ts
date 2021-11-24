@@ -1,6 +1,7 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { showHide, rotatedState } from '../../component-animations';
 import { ABOUT_SECTIONS } from './about.constants';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-about-page',
@@ -9,6 +10,8 @@ import { ABOUT_SECTIONS } from './about.constants';
   animations: [showHide, rotatedState],
 })
 export class AboutPageComponent implements OnInit {
+  @ViewChild(ModalComponent)
+  modal: ModalComponent = new ModalComponent();
   sections = ABOUT_SECTIONS;
   short = true;
   innerWidth: number | undefined;
@@ -22,6 +25,11 @@ export class AboutPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
+  }
+
+  toggleDetails(item: any) {
+    this.modal.showModal = true;
+    this.modal.toggleModal(true, item);
   }
 
   toggleShowHide(index: number): void {

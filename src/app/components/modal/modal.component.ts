@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { fromEvent, Subject } from 'rxjs';
 import { distinctUntilChanged, filter, takeUntil } from 'rxjs/operators';
 
@@ -14,9 +14,9 @@ export interface ModalContent {
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit, OnDestroy {
-  @Input() content: ModalContent = { details: [], title: '', date: '' };
   showModal = false;
   unsubscribe$ = new Subject();
+  content: ModalContent | undefined;
 
   ngOnInit(): void {
     fromEvent(document, 'keyup')
@@ -32,13 +32,24 @@ export class ModalComponent implements OnInit, OnDestroy {
     this.unsubscribe$.next();
   }
 
-  toggleModal(): void {
-    this.showModal = !this.showModal;
-  }
-
-  preventToggle(event: Event): void {
+  public preventToggle(event: Event): void {
     event.preventDefault();
     event.stopPropagation();
     event.stopImmediatePropagation();
+  }
+
+  public toggleModal(
+    openModal: boolean,
+    content: ModalContent | undefined
+  ): void {
+    this.content = content;
+    const modalContainer =
+      document.getElementsByClassName('modal-container')[0];
+    if (!openModal) {
+      modalContainer?.classList.add('out');
+    } else {
+      modalContainer?.classList.remove('out');
+      modalContainer?.classList.add('circle-slider');
+    }
   }
 }

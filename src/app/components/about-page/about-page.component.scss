@@ -11,19 +11,6 @@
     flex-direction: column;
     gap: 24px;
 
-    app-contact-button {
-      align-self: flex-end;
-    }
-
-    @include respond-to("small") {
-      flex-direction: row;
-      align-items: center;
-
-      app-contact-button {
-        align-self: unset;
-      }
-    }
-
     @include respond-to("medium") {
       flex-direction: row;
       margin: 0 0 5vh 0;
@@ -114,6 +101,34 @@
 
           @include respond-to("xx-large") {
             font-size: 1.5em;
+          }
+
+          li {
+            list-style: none;
+          }
+
+          .info-button-container {
+            display: flex;
+
+            hr {
+              width: 65%;
+              margin: auto 12px;
+            }
+
+            button {
+              border-radius: 1em;
+              border: none;
+              padding: 10px;
+              color: var(--primary-text-color);
+              background: var(--primary-button-color);
+
+              @include respond-to("medium") {
+                &:hover {
+                  box-shadow: 0px 1px 7px 2px var(--primary-text-color);
+                  cursor: pointer;
+                }
+              }
+            }
           }
         }
       }
