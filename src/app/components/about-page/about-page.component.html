@@ -39,12 +39,15 @@
         >
           <h3>{{ item.jobTitle }}</h3>
           <ng-container *ngIf="item.otherTitle">
-            <h3 *ngFor="let other of item.otherTitle">
-              {{ other }}
-            </h3>
+            <li *ngFor="let other of item.otherTitle">{{ other }}</li>
           </ng-container>
-          <div *ngIf="!!item.moreInfo && !!item.moreInfo.title">
-            <app-modal [content]="item.moreInfo"></app-modal>
+          <div
+            class="info-button-container"
+            *ngIf="!!item.moreInfo && !!item.moreInfo.title"
+          >
+            <hr />
+            <button (click)="toggleDetails(item.moreInfo)">More Info</button>
+            <app-modal></app-modal>
           </div>
         </div>
       </div>

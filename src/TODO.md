@@ -5,8 +5,10 @@ TODO:
   - [x] languages and frameworks
   - [x] experience
   - [x] education
-  - [ ] change the language section, text alignment off on small screens
-  - [ ] transition speed on modal
+  - [x] change the language section, text alignment off on small screens
+  - [x] transition speed on modal
+  - [ ] modal text styles
+  - [ ] modal close button
   - [ ] references?
 - [x] home
   - [x] ~~add contact button~~
