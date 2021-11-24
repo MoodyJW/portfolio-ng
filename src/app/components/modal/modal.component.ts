@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { fromEvent, merge, Observable, Subject } from 'rxjs';
+import { fromEvent, Subject } from 'rxjs';
 import { distinctUntilChanged, filter, takeUntil } from 'rxjs/operators';
 
 export interface ModalContent {
@@ -18,7 +18,7 @@ export class ModalComponent implements OnInit, OnDestroy {
   showModal = false;
   unsubscribe$ = new Subject();
 
-  ngOnInit() {
+  ngOnInit(): void {
     fromEvent(document, 'keyup')
       .pipe(
         filter((e: any) => e.key === 'Escape'),
@@ -28,7 +28,7 @@ export class ModalComponent implements OnInit, OnDestroy {
       .subscribe(() => (this.showModal = false));
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.unsubscribe$.next();
   }
 

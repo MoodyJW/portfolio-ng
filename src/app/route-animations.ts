@@ -168,6 +168,15 @@ export const stepper = trigger('routeAnimations', [
       ],
       optional
     ),
+    query(
+      '.contact-button',
+      [
+        style({
+          pointerEvents: 'none',
+        }),
+      ],
+      optional
+    ),
     group([
       query(
         ':enter',
