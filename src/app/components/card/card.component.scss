@@ -1,7 +1,7 @@
 @import "src/styles.scss";
 
 .card {
-  height: 20vh;
+  height: 25vh;
   background-color: var(--primary-background-color);
   border-radius: 1em;
   border: none;
@@ -104,8 +104,8 @@
 
       a {
         position: absolute;
-        right: 8px;
-        bottom: 7px;
+        right: 0.5em;
+        bottom: 1em;
         color: hsl(313, 24%, 50%);
 
         &:visited {

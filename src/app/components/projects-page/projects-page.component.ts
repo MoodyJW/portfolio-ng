@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { PROJECTS } from './projects.constants';
 
 export interface Project {
@@ -15,10 +15,25 @@ export interface Project {
   templateUrl: './projects-page.component.html',
   styleUrls: ['./projects-page.component.scss'],
 })
-export class ProjectsPageComponent {
+export class ProjectsPageComponent implements OnInit {
   projects = PROJECTS;
+  innerWidth: number | undefined;
 
-  toggleOpenState(project: Project): void {
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.innerWidth = window.innerWidth;
+  }
+
+  ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
+  }
+
+  toggleOpenState(project: Project, index: number): void {
+    if (this.innerWidth && this.innerWidth >= 1440) {
+      this.projects[index].openState =
+        this.projects[index].openState === 'open' ? 'closed' : 'open';
+      return;
+    }
     const openState: string = project.openState;
     const title: string = project.title;
     this.projects.forEach((project: Project) => {
