@@ -5,11 +5,7 @@ import { AboutPageComponent } from './components/about-page/about-page.component
 import { ProjectsPageComponent } from './components/projects-page/projects-page.component';
 
 const routes: Routes = [
-  {
-    path: 'portfolio-ng',
-    component: HomePageComponent,
-    data: { animation: 'homePage', pathName: 'home' },
-  },
+  
   {
     path: 'home',
     component: HomePageComponent,
@@ -32,6 +28,7 @@ const routes: Routes = [
   },
   {
     path: '**',
+    pathMatch: 'full',
     redirectTo: 'home',
   },
 ];
