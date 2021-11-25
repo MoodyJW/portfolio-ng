@@ -24,11 +24,10 @@ TODO:
   - [x] git, LI, leetcode, email, etc
 
 - [x] styles
-
-  - [ ] modal
+  - [x] modal
     - [x] text styles
     - [x] modal close button
-    - [ ] seems to be an issue between about styles and modal styles, need to figure that shit out
+    - [x] seems to be an issue between about styles and modal styles, need to figure that shit out
   - [x] home
   - [x] projects
     - [x] responsive styles
@@ -36,12 +35,14 @@ TODO:
     - [x] fix links, maybe just embed them in the text instead,
           styles not great on mobile
   - [x] navigation
-
     - [x] header
     - [x] ~~footer~~ footer is all fucked up on mobile chrome, so fuck it, changing it
-
   - [x] desktop
     - [x] home screen is garbage
     - [x] projects grid
     - [x] about screen could probably be centered or something, too much empty space
+  - [ ] tests..
+  - [ ] PWA
   - [ ] clean up, organize, remove unused, etc
+  - [x] BUGS
+    - [x] contact stays lit on mobile

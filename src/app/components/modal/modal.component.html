@@ -5,16 +5,15 @@
 >
   <div class="modal-background">
     <div class="modal" (click)="preventToggle($event)">
-      <h1>
-        {{ content?.title }} <br />
-        {{ content?.date }}
-      </h1>
-      <ul>
-        <li *ngFor="let detail of content?.details">{{ detail }}</li>
-      </ul>
-      <button class="close-modal-button" (click)="toggleModal(false, content)">
-        X
-      </button>
+      <div class="modal-content">
+        <h1>
+          {{ content?.title }} <br />
+          {{ content?.date }}
+        </h1>
+        <ul>
+          <li *ngFor="let detail of content?.details">{{ detail }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
