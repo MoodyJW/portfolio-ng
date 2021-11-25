@@ -26,9 +26,9 @@ TODO:
 - [x] styles
 
   - [ ] modal
-    - [ ] text styles
-    - [ ] modal close button
-    - [ ] entertain idea of sliding the modal out like it comes in
+    - [x] text styles
+    - [x] modal close button
+    - [ ] seems to be an issue between about styles and modal styles, need to figure that shit out
   - [x] home
   - [x] projects
     - [x] responsive styles
