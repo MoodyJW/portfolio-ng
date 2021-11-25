@@ -6,6 +6,11 @@ import { ProjectsPageComponent } from './components/projects-page/projects-page.
 
 const routes: Routes = [
   {
+    path: 'portfolio-ng',
+    component: HomePageComponent,
+    data: { animation: 'homePage', pathName: 'home' },
+  },
+  {
     path: 'home',
     component: HomePageComponent,
     data: { animation: 'homePage', pathName: 'home' },
