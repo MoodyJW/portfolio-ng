@@ -14,9 +14,10 @@ export interface ModalContent {
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit, OnDestroy {
-  showModal = false;
   unsubscribe$ = new Subject();
   content: ModalContent | undefined;
+  showModal = false;
+  circleSlider: boolean = false;
 
   ngOnInit(): void {
     fromEvent(document, 'keyup')
@@ -43,13 +44,7 @@ export class ModalComponent implements OnInit, OnDestroy {
     content: ModalContent | undefined
   ): void {
     this.content = content;
-    const modalContainer =
-      document.getElementsByClassName('modal-container')[0];
-    if (!openModal) {
-      modalContainer?.classList.add('out');
-    } else {
-      modalContainer?.classList.remove('out');
-      modalContainer?.classList.add('circle-slider');
-    }
+    this.circleSlider = true;
+    this.showModal = openModal;
   }
 }
