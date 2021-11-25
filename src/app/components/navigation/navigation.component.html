@@ -3,7 +3,7 @@
     <a
       *ngIf="i !== 3"
       class="navigation-link"
-      [ngClass]="pathName === link.title ? 'glowing' : 'unset'"
+      [ngClass]="pathName === link.title ? 'app-glowing' : 'unset'"
       [routerLink]="link.url"
     >
       {{ link.title }}

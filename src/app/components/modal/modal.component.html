@@ -1,4 +1,8 @@
-<div class="modal-container" (click)="toggleModal(false, content)">
+<div
+  class="modal-container"
+  [ngClass]="{ 'circle-slider': circleSlider, out: !showModal }"
+  (click)="toggleModal(false, content)"
+>
   <div class="modal-background">
     <div class="modal" (click)="preventToggle($event)">
       <h1>

@@ -6,11 +6,6 @@ import { ProjectsPageComponent } from './components/projects-page/projects-page.
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'home',
-  },
-  {
     path: 'home',
     component: HomePageComponent,
     data: { animation: 'homePage', pathName: 'home' },
@@ -24,6 +19,16 @@ const routes: Routes = [
     path: 'about',
     component: AboutPageComponent,
     data: { animation: 'aboutPage', pathName: 'about' },
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home',
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'home',
   },
 ];
 
