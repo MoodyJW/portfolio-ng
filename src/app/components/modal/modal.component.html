@@ -8,6 +8,9 @@
       <ul>
         <li *ngFor="let detail of content?.details">{{ detail }}</li>
       </ul>
+      <button class="close-modal-button" (click)="toggleModal(false, content)">
+        X
+      </button>
     </div>
   </div>
 </div>

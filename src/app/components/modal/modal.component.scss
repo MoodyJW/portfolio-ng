@@ -85,6 +85,18 @@
           margin: 1em 0;
         }
       }
+
+      .close-modal-button {
+        border: none;
+        background: transparent;
+        color: var(--primary-text-color);
+        font-size: 2em;
+        align-self: end;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
