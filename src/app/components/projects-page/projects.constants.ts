@@ -11,6 +11,15 @@ export const PROJECTS: Project[] = [
     openState: 'closed',
   },
   {
+    title: 'The Chase',
+    description: 'Browser Game Using RxJS',
+    details:
+      'I started with an RxJS tutorial and then got a bit carried away.  Click the dots before their timers run out, a new dot appears every five seconds.',
+    url: 'https://moodyjw.github.io/the-chase/',
+    urlText: 'project demo',
+    openState: 'closed',
+  },
+  {
     title: '2°',
     description: '2nd Place Houston Climathon 2019',
     details:

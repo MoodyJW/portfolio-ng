@@ -44,5 +44,6 @@ TODO:
   - [ ] tests..
   - [ ] PWA
   - [ ] clean up, organize, remove unused, etc
+  - [ ] no animation option and other accessibility support
   - [x] BUGS
     - [x] contact stays lit on mobile
