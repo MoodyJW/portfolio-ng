@@ -38,10 +38,14 @@
     }
 
     .card-container {
-      margin: 13vh 0;
+      margin: 14vh 0;
 
-      @include respond-to("large") {
-        margin: 15vh 0;
+      @include respond-to("medium") {
+        margin: 9vh 0;
+      }
+
+      @include respond-to("xx-large") {
+        margin: 11vh 0;
       }
     }
   }
