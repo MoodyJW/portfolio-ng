@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
         0x1fab3,
         0x1fab0,
         0x1f41c
-      )} or have suggestions to improve the site. Click the contact button or just send an email to: jmoody1813@gmail.com.`,
+      )} or have suggestions to improve the site. Click the contact button or just send an email to: JWMoody@protonmail.com.`,
       `font-family: Fira Mono, monospace; font-size: 16px; color: 255, 255, 255, 0.934; background-color: #333;padding: 5px`
     );
     if (this.themeQuery.matches) {
